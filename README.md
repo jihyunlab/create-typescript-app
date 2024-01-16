@@ -11,7 +11,7 @@ You can quickly configure your TypeScript development environment using @jihyunl
 Run @jihyunlab/create-typescript-app in your working folder.
 
 ```bash
-npx @jihyunlab/create-typescript-app
+npx @jihyunlab/create-typescript-app@latest
 ```
 
 Enter the project name.
