@@ -1,0 +1,11 @@
+{
+  "extends": ["@jihyunlab/eslint-config", "prettier"],
+  "plugins": ["prettier"],
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
+  "ignorePatterns": ["jest.config.js"],
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}
