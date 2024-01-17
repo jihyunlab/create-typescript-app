@@ -1,6 +1,6 @@
 {
   "name": "@jihyunlab/create-typescript-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JihyunLab Create typescript app.",
   "license": "MIT",
   "author": "JihyunLab <info@jihyunlab.com> (https://jihyunlab.com)",
@@ -24,7 +24,8 @@
     "node": ">=16"
   },
   "dependencies": {
-    "commander": "^11.1.0"
+    "commander": "^11.1.0",
+    "prompts": "^2.4.2"
   },
   "devDependencies": {
     "@jihyunlab/eslint-config": "^1.1.3",
