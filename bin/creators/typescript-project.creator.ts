@@ -1,7 +1,7 @@
 import { Location as LocationHelper } from '../helpers/location.helper';
 import { readFileSync, rmSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import { execSync, spawn } from 'child_process';
+import { execSync, spawnSync } from 'child_process';
 
 export const TypescriptProject = {
   createApp(name: string) {
@@ -16,10 +16,6 @@ export const TypescriptProject = {
     }
 
     execSync(`git clone https://github.com/jihyunlab/typescript-starter.git ${name}`, { stdio: 'pipe' });
-
-    if (!LocationHelper.isExist(location)) {
-      throw new Error('failed to clone starter project.');
-    }
 
     const basename = LocationHelper.toBasename(location);
 
@@ -52,13 +48,11 @@ export const TypescriptProject = {
     rmSync(join(location, '.git'), { recursive: true, force: true });
 
     // npm i
-    const install = spawn('npm', ['i'], {
+    spawnSync('npm', ['i'], {
       cwd: location,
       env: process.env,
       shell: process.platform === 'win32',
       stdio: [null, process.stdout, process.stderr],
     });
-
-    install.on('close', () => {});
   },
 };
