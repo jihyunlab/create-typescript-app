@@ -13,7 +13,7 @@
   "scripts": {
     "build": "tsc --build",
     "clean": "tsc --build --clean",
-    "lint": "eslint bin/**/*.{ts,tsx,js,jsx} && eslint test/**/*.{ts,tsx,js,jsx}",
+    "lint": "eslint bin/**/*.ts && eslint test/**/*.ts",
     "test": "jest --coverage --coverageReporters=cobertura"
   },
   "keywords": [
