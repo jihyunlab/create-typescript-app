@@ -26,4 +26,4 @@ Authored and maintained by JihyunLab <<info@jihyunlab.com>>
 
 ## License
 
-Open source [licensed as MIT](https://github.com/jihyunlab/crypto/blob/master/LICENSE).
+Open source [licensed as MIT](https://github.com/jihyunlab/create-typescript-app/blob/master/LICENSE).
