@@ -1,8 +1,8 @@
-import { Location as LocationHelper } from '../../bin/helpers/location.helper';
+import { LocationHelper } from '../../bin/helpers/location.helper';
 import { join } from 'path';
 import { mkdirSync, rmSync, writeFileSync } from 'fs';
 
-describe('Location', () => {
+describe('LocationHelper', () => {
   const base = 'test-location';
 
   const textString = 'Welcome to JihyunLab.';

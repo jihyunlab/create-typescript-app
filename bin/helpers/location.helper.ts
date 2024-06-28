@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-export const Location = {
+export const LocationHelper = {
   isAbsolute(location: string) {
     return path.isAbsolute(location);
   },

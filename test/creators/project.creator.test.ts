@@ -1,9 +1,9 @@
-import { TypescriptProject as TypescriptProjectCreator } from '../../bin/creators/typescript-project.creator';
+import { ProjectCreator } from '../../bin/creators/project.creator';
 import { join } from 'path';
 import { mkdirSync, readFileSync, rmSync } from 'fs';
 
-describe('TypescriptProject', () => {
-  const base = 'test-typescriptproject';
+describe('ProjectCreator', () => {
+  const base = 'test-project';
   const name = 'my-app';
 
   const dir = join(base, name);
@@ -22,23 +22,25 @@ describe('TypescriptProject', () => {
 
   test('createApp()', () => {
     expect(() => {
-      TypescriptProjectCreator.createApp(dir);
+      ProjectCreator.createApp(dir);
 
-      const packageJson = JSON.parse(readFileSync(join(dir, 'package.json')).toString());
+      const packageJson = JSON.parse(
+        readFileSync(join(dir, 'package.json')).toString()
+      );
       expect(packageJson['name']).toBe(name);
     }).not.toThrow();
   });
 
   test('createApp(): exception(empty)', () => {
     expect(() => {
-      TypescriptProjectCreator.createApp(' ');
+      ProjectCreator.createApp(' ');
     }).toThrow(Error);
   });
 
   test('createApp(): exception(already exists)', () => {
     expect(() => {
       mkdirSync(dir, { recursive: true });
-      TypescriptProjectCreator.createApp(dir);
+      ProjectCreator.createApp(dir);
     }).toThrow(Error);
   });
 });

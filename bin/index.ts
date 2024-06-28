@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
-import { TypescriptProject as TypescriptProjectCreator } from './creators/typescript-project.creator';
-import { Location as LocationHelper } from './helpers/location.helper';
+import { ProjectCreator } from './creators/project.creator';
+import { LocationHelper } from './helpers/location.helper';
 import prompts, { InitialReturnValue } from 'prompts';
 import { setMaxListeners } from 'events';
 
@@ -12,7 +12,11 @@ const handleSigTerm = () => process.exit(0);
 process.on('SIGINT', handleSigTerm);
 process.on('SIGTERM', handleSigTerm);
 
-const onPromptState = (state: { value: InitialReturnValue; aborted: boolean; exited: boolean }) => {
+const onPromptState = (state: {
+  value: InitialReturnValue;
+  aborted: boolean;
+  exited: boolean;
+}) => {
   if (state.aborted) {
     process.stdout.write('\x1B[?25h');
     process.stdout.write('\n');
@@ -56,7 +60,7 @@ program.action(async () => {
   });
 
   try {
-    TypescriptProjectCreator.createApp(response.path.trim());
+    ProjectCreator.createApp(response.path.trim());
   } catch (error) {
     if (error instanceof Error) {
       console.log(`error: ${error.message}`);
