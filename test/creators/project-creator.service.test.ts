@@ -1,4 +1,4 @@
-import { ProjectCreator } from '../../bin/creators/project.creator';
+import { ProjectCreator } from '../../bin/creators/project-creator.service';
 import { join } from 'path';
 import { mkdirSync, readFileSync, rmSync } from 'fs';
 
