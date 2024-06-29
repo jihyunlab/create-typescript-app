@@ -28,6 +28,7 @@ export const ProjectCreator = {
     );
 
     packageJson['name'] = basename;
+    packageJson['version'] = '1.0.0';
     packageJson['description'] = '';
     packageJson['license'] = 'UNLICENSED';
 
