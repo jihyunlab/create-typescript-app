@@ -9,6 +9,6 @@
     "outDir": "dist"
     // "sourceMap": true
   },
-  "include": ["bin/**/*.ts"],
+  "include": ["bin"],
   "exclude": ["node_modules", "dist", "build", "coverage"]
 }
