@@ -27,8 +27,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.6.0",
-    "@jihyunlab/eslint-config": "^2.0.4",
-    "@jihyunlab/prettier-config": "^2.0.4",
+    "@jihyunlab/eslint-config": "^2.0.5",
+    "@jihyunlab/prettier-config": "^2.0.5",
     "@types/eslint__js": "^8.42.3",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.9",
