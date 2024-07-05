@@ -5,7 +5,8 @@
 
 JihyunLab Create typescript app.
 
-@jihyunlab/create-typescript-app provides TypeScript templates with ESLint, Prettier, Jest, and Github workflows.\
+@jihyunlab/create-typescript-app provides TypeScript templates with ESLint, Prettier, Jest, and Github workflows.
+
 You can quickly configure your TypeScript development environment using @jihyunlab/create-typescript-app.
 
 ## Usage
