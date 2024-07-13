@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
-import { ProjectCreator } from './creators/project-creator.service';
+import { ProjectCreator } from './creators/project.creator';
 import { LocationHelper } from './helpers/location.helper';
 import prompts, { InitialReturnValue } from 'prompts';
 import { setMaxListeners } from 'events';
