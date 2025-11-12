@@ -85,7 +85,6 @@ export const ProjectCreator = {
         '@jihyunlab/eslint-config',
         'eslint',
         '@eslint/js',
-        '@types/eslint__js',
         'typescript',
         'typescript-eslint',
       ],
